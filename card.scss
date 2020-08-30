@@ -46,6 +46,12 @@
       "r7"
       "r8";
   }
+  .identity,
+  .date,
+  .num,
+  .CInum{
+    text-decoration: underline dotted pink;
+  }
 /*==============
        Flip card   r2 margin
 no front ok???
@@ -234,5 +240,6 @@ no front ok???
   html,
   body {
     background: #232323;
+    font-family: 'Noto Sans SC', sans-serif;
   }
-  
+ 
