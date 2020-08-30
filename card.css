@@ -1,0 +1,246 @@
+@charset "UTF-8";
+.nameback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  max-width: 100%;
+  width: 20em;
+  height: 15em;
+  margin: 3em 2em;
+  padding: 2em;
+  background: #fff;
+}
+
+.imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.qrcode > img {
+  width: 5em;
+  height: 5em;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.tag {
+  max-width: 100%;
+  width: 20em;
+  height: 15em;
+  margin: 3em 2em;
+  padding: 2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: #fff;
+  -ms-grid-rows: (0.3fr)[8];
+      grid-template-rows: repeat(8, 0.3fr);
+      grid-template-areas: "r1" "r2" "r3" "r4" "." "r6" "r7" "r8";
+}
+
+/*==============
+       Flip card   r2 margin
+no front ok???
+先把旋轉關燈和把tag拉上來看名片size
+===============*/
+.flip-card {
+  background-color: transparent;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+.inner {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+  transition: transform 0.6s, -webkit-transform 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/*==============
+         TAGS
+  ===============*/
+.tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+/*==============
+         TAG
+  ===============*/
+.r4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.r4 .number {
+  margin-right: 3em;
+}
+
+.r4 .date {
+  margin-right: 1.5em;
+}
+
+.r6 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.r1 img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 18em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/*compare to position absolute this is better solution to position skyteam*/
+.r1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: r1;
+}
+
+.r2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: r2;
+  margin: .2em 0;
+}
+
+.r3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: r3;
+}
+
+.r4 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: r4;
+}
+
+.r6 {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: r6;
+}
+
+.r7 {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: r7;
+}
+
+.r8 {
+  -ms-grid-row: 8;
+  -ms-grid-column: 1;
+  grid-area: r8;
+  place-self: center;
+}
+
+.line1 {
+  background: #000;
+  display: inline-block;
+  width: 1px;
+  height: 2em;
+}
+
+.line2 {
+  background: #000;
+  display: inline-block;
+  width: .6em;
+  height: 2em;
+}
+
+.line3 {
+  background: #000;
+  display: inline-block;
+  width: .1em;
+  height: 2em;
+}
+
+.line4 {
+  background: #000;
+  display: inline-block;
+  width: .2em;
+  height: 2em;
+}
+
+.line5 {
+  background: #fff;
+  display: inline-block;
+  width: .3em;
+  height: 2em;
+}
+
+.line6 {
+  background: #000;
+  display: inline-block;
+  width: .4em;
+  height: 2em;
+}
+
+.line7 {
+  background: #000;
+  display: inline-block;
+  width: .5em;
+  height: 2em;
+}
+
+/*==============
+         BASE
+  ===============*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  background: #232323;
+}
+/*# sourceMappingURL=card.css.map */

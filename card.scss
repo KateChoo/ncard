@@ -1,0 +1,238 @@
+.nameback{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    max-width: 100%;
+    width: 20em;
+    height: 15em;
+    margin: 3em 2em;
+    padding: 2em;
+    background: #fff;
+}
+.imgs{
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    
+}
+.qrcode>img{
+    width: 5em;
+    height: 5em;
+    align-self:center;
+}
+.tag {
+    max-width: 100%;
+    width: 20em;
+    height: 15em;
+    margin: 3em 2em;
+    padding: 2em;
+    display: grid;
+    align-content: center; 
+    background: #fff;
+    // justify-content: center; 
+    grid-template-rows: repeat(8, .3fr);
+    grid-template-areas:
+      "r1"
+      "r2"
+      "r3"
+      "r4"
+      "."
+      "r6"
+      "r7"
+      "r8";
+  }
+/*==============
+       Flip card   r2 margin
+no front ok???
+先把旋轉關燈和把tag拉上來看名片size
+===============*/
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+  }
+  
+  .inner {
+    position: relative;
+  
+    // text-align: center;   /*YOU!!!! YOU!!!*/ 
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+   
+  }
+  
+//   .flip-card:hover .inner {    tag
+//     transform: rotateY(180deg);
+//   }
+  
+//   .front, .back {
+//     position: absolute;
+  
+//     -webkit-backface-visibility: hidden;
+//     backface-visibility: hidden;
+//   }
+  
+//   .back {
+//     transform: rotateY(180deg);
+//      width: 20em;
+//     height: 15em;
+//   }
+  
+  
+  /*==============
+         TAGS
+  ===============*/
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    // align-items: center;
+  }
+  /*==============
+         TAG
+  ===============*/
+  .r4 {
+    display: flex; 
+    .number{
+      margin-right: 3em;
+    }
+    .date{
+      margin-right: 1.5em;
+    }
+  }
+  .r6{
+    display:flex;
+    justify-content: flex-end;
+  }
+  .r1 img {
+    display:flex;
+    max-width: 18em;
+    width: 80%;
+    margin: 0 auto;
+  }
+    /*compare to position absolute this is better solution to position skyteam*/
+  // .r1{
+  //   display:flex;
+  //   justify-content: center;
+  //   align-items: center; 
+  //   color: #00008B;
+  //   .skyteam{
+  //     width: 1.5em;
+  //     height: 1.5em;
+  //     margin-left: .35em;
+  //   }
+  //   .logo{
+  //     width: 1.5em;
+  //     height: 1.5em;
+  //     margin-iright: .35em;
+  //   }
+  // }
+  
+//   .tag {
+//     max-width: 100%;
+//     width: 20em;
+//     height: 15em;
+//     margin: 3em 2em;
+//     padding: .5em;
+//     display: grid;
+//     align-content: center; 
+//     background: #fff;
+//     // justify-content: center; 
+//     grid-template-rows: repeat(8, .3fr);
+//     grid-template-areas:
+//       "r1"
+//       "r2"
+//       "r3"
+//       "r4"
+//       "."
+//       "r6"
+//       "r7"
+//       "r8";
+//   }
+  .r1{
+    grid-area: r1;
+  }
+  .r2{
+    grid-area: r2;
+    margin: .2em 0;
+  }
+  .r3{
+    grid-area: r3;
+  }
+  .r4{
+    grid-area: r4;
+  }
+  .r6{
+    grid-area: r6;
+  }
+  .r7{
+    grid-area: r7;
+  }
+  .r8{
+    grid-area: r8;
+     place-self: center;
+  }
+  .line1{
+    background: #000;
+    display: inline-block;
+    width:1px;
+    height: 2em;
+  }
+  .line2{
+    background: #000;
+    display: inline-block;
+    width:.6em;
+    height: 2em;
+  }
+  .line3{
+    background: #000;
+    display: inline-block;
+    width:.1em;
+    height: 2em;
+  }
+  .line4{
+    background: #000;
+    display: inline-block;
+    width:.2em;
+    height: 2em;
+  }
+  .line5{
+    background: #fff;
+    display: inline-block;
+    width:.3em;
+    height: 2em;
+  }
+  .line6{
+    background: #000;
+    display: inline-block;
+    width:.4em;
+    height: 2em;
+  }
+  .line7{
+    background: #000;
+    display: inline-block;
+    width:.5em;
+    height: 2em;
+  }
+  
+  
+  
+  /*==============
+         BASE
+  ===============*/
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    background: #232323;
+  }
+  
