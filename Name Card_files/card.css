@@ -21,13 +21,6 @@
   margin: 3em 2em;
   padding: 2em;
   background: #fff;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.r7 img {
-  width: 15em;
-  height: 2.5em;
 }
 
 .imgs {
@@ -44,7 +37,6 @@
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  background: #fff;
 }
 
 .qrcode > img {
@@ -72,7 +64,9 @@
 }
 
 .identity,
-.num {
+.date,
+.num,
+.CInum {
   -webkit-text-decoration: underline dotted pink;
           text-decoration: underline dotted pink;
 }
@@ -251,5 +245,10 @@ no front ok???
 *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html,
+body {
+  background: #232323;
 }
 /*# sourceMappingURL=card.css.map */
